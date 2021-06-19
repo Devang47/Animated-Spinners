@@ -1,19 +1,9 @@
 const addContent = () => {
+  let htmlCode, cssCode, jsCode, rootCss;
+
+
+
   swiper.on("slideChange", () => {
-    let htmlCode, cssCode, jsCode, rootCss;
-    rootCss =
-      ":root{--stroke:#61cbf5;--head:#aee8ff;--fill:#61cbf5;--textFill:#000;--border:#61cbf500}";
-
-    if (localStorage.getItem("theme")) {
-      if (localStorage.getItem("theme") == "stroked") {
-        rootCss =
-          ":root{--stroke:#61cbf5;--head:#aee8ff;--fill:#0000;--textFill:#61cbf5;--border:#61cbf5}";
-      } else if (localStorage.getItem("theme") == "filled") {
-        rootCss =
-          ":root{--stroke:#61cbf5;--head:#aee8ff;--fill:#61cbf5;--textFill:#000;--border:#61cbf500}";
-      }
-    }
-
     if (swiper.activeIndex == 1) {
       htmlCode =
         "&lt;div class=&quot;item item1&quot;&gt; &lt;svg id=&quot;firstSVG&quot; width=&quot;306&quot; height=&quot;306&quot; viewBox=&quot;0 0 306 306&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; &gt; &lt;circle class=&quot;first-circles&quot; cx=&quot;153&quot; cy=&quot;73&quot; r=&quot;20&quot; stroke=&quot;black&quot; stroke-width=&quot;7&quot; /&gt; &lt;circle class=&quot;first-circles&quot; cx=&quot;208.833&quot; cy=&quot;95.5&quot; r=&quot;20&quot; stroke=&quot;black&quot; stroke-width=&quot;7&quot; /&gt; &lt;circle class=&quot;first-circles&quot; cx=&quot;233&quot; cy=&quot;153&quot; r=&quot;20&quot; stroke=&quot;black&quot; stroke-width=&quot;7&quot; /&gt; &lt;circle class=&quot;first-circles&quot; cx=&quot;208.833&quot; cy=&quot;208.833&quot; r=&quot;20&quot; stroke=&quot;black&quot; stroke-width=&quot;7&quot; /&gt; &lt;circle class=&quot;first-circles&quot; cx=&quot;153&quot; cy=&quot;233&quot; r=&quot;20&quot; stroke=&quot;black&quot; stroke-width=&quot;7&quot; /&gt; &lt;circle class=&quot;first-circles&quot; cx=&quot;96.3333&quot; cy=&quot;208.833&quot; r=&quot;20&quot; stroke=&quot;black&quot; stroke-width=&quot;7&quot; /&gt; &lt;circle class=&quot;first-circles&quot; cx=&quot;73&quot; cy=&quot;153&quot; r=&quot;20&quot; stroke=&quot;black&quot; stroke-width=&quot;7&quot; /&gt; &lt;circle class=&quot;first-circles&quot; cx=&quot;95.5&quot; cy=&quot;97.1667&quot; r=&quot;20&quot; stroke=&quot;black&quot; stroke-width=&quot;7&quot; /&gt; &lt;/svg&gt;&lt;/div&gt;   &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js&quot; integrity=&quot;sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;";
@@ -68,6 +58,15 @@ const addContent = () => {
       jsCode =
         'let tl=anime.timeline({loop:true,easing:"easeOutQuad",});tl.add({targets:".circle",height:35,duration:20,}).add({targets:".circle",translateY:-290,easing:"easeOutQuad",duration:500,}).add({targets:".circle",height:70,duration:300,},"-=500").add({targets:".circle",width:[70,35,70],duration:300,},"-=500").add({targets:".circle",translateY:0,duration:500,easing:"easeInQuad",}).add({targets:".circle",width:[70,55],duration:500,},"-=500").add({targets:".circle",height:35,width:70,duration:30,});let tlRect=anime.timeline({loop:true,easing:"easeOutQuad",});tlRect.add({targets:".rect",translateY:-180,rotate:180,width:90,height:90,duration:500,delay:10,}).add({targets:".rect",translateY:0,duration:500,easing:"easeInQuad",}).add({targets:".rect",width:140,height:40,duration:500,easing:"easeInQuad",},"-=500").add({targets:".rect",duration:40,});';
     }
+
+
+    if (localStorage.getItem("theme") == "stroked") {
+        rootCss =
+          ":root{--stroke:#61cbf5;--head:#aee8ff;--fill:#0000;--textFill:#61cbf5;--border:#61cbf5}";
+      } else{
+        rootCss =
+          ":root{--stroke:#61cbf5;--head:#aee8ff;--fill:#61cbf5;--textFill:#000;--border:#61cbf500}";
+      }
     document.querySelector(".htmlCode").innerHTML = htmlCode;
     document.querySelector("#css-code").innerHTML = rootCss + cssCode;
     document.querySelector("#js-code").innerHTML = jsCode;

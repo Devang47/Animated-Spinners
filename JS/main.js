@@ -13,7 +13,6 @@ function toggleTheme() {
     setTheme("stroked");
   }
   addContent();
-  
 }
 
 // theme setter func.
@@ -21,7 +20,6 @@ function setTheme(themeName) {
   localStorage.setItem("theme", themeName);
   document.body.className = themeName;
 }
-
 
 // swiper init
 const swiper = new Swiper(".swiper-container", {
@@ -38,21 +36,22 @@ const swiper = new Swiper(".swiper-container", {
 });
 swiper.on("slideChange", addContent());
 
-// first animation starts onload of window 
-// it is a known bug and needs to be fixed 
+// first animation starts onload of window
+// it is a known bug and needs to be fixed
 window.addEventListener("load", () => {
   animateZero();
-      animateFirst();
-      animateSecond();
-      animateThird();
-      animateFourth();
-      animateFifth();
-      animateSixth();
-
+  animateFirst();
+  animateSecond();
+  animateThird();
+  animateFourth();
+  animateFifth();
+  animateSixth();
 });
 
 // animation of Source-Code box
 const sourceBtnEvent = () => {
+  // alertify.message("Normal message");
+  addContent()
   if (
     document.querySelector(".source-box-shadow").style.display == "" ||
     document.querySelector(".source-box-shadow").style.display == "none"
@@ -74,6 +73,30 @@ const sourceBtnEvent = () => {
         });
       },
     });
+
+    anime({
+      targets: ".animatedTip",
+      right: ["0%", "5%"],
+      opacity: [0, 1],
+      delay: 1000,
+      duration: 100,
+      easing: "easeInOutSine",
+      begin: () => {
+        document.querySelector(".animatedTip").style.display = "block";
+      },
+    });
+      anime({
+        targets: ".animatedTip",
+        right: ["5%", "3%"],
+        opacity: [1, 0],
+        delay: 6100,
+        easing: "easeInOutSine",
+        duration: 100,
+        complete: () => {
+          document.querySelector(".animatedTip").style.display = "none";
+        },
+      });
+ 
   } else {
     anime({
       targets: ".source-view-box",

@@ -4,6 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 6;
+  display: block;
   button {
     background-color: #ff1053;
     background-color: var(--fill);
@@ -70,7 +71,9 @@
   }
   p{
     font-family: Arial, Helvetica, sans-serif;
-    padding:  20px
+    padding:  20px;
+    width: 100%;
+    // overflow: auto;
   }
   #js-code,
   #css-code,

@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multiple spinners</title>
     <link rel="stylesheet" href="./CSS/style.css" />
-    <link rel="stylesheet" href="./hint.css" />
-    <link rel="stylesheet" href="./swiper.min.css" />
-
-    <script src="./anime.min.js"></script>
+    <link rel="stylesheet" href="./CSS/hint.css" />
+    <link rel="stylesheet" href="./CSS/swiper.min.css" />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"
+    />
+    <script src="./JS/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.min.js" integrity="sha512-qqdD5ZLIGB5PCqCk1OD8nFBr/ngB5w+Uw35RE/Ivt5DK35xl1PFVkuOgAbqFpvtoxX6MpRGLmIqixzdhFOJhnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- <script src="./swiper.js"></script> -->
+    <!-- <script src="./JS/swiper.js"></script> -->
+    <script src="./JS/alertfy.js" defer></script>
     <script src="./JS/AnimationScript.js" defer></script>
     <script src="./JS/Content.js" defer></script>
     <script src="./JS/main.js" defer></script>
@@ -370,6 +374,10 @@
         <img src="./Images/swap.png" alt="" />
       </button>
     </div>
+    <div class="animatedTip">
+      <span> Tip: </span><br />
+      Triple click to select all then use ctrl+c to copy.
+    </div>
     <div class="source-btn">
       <button onclick="sourceBtnEvent()">Source</button>
     </div>
@@ -392,27 +400,21 @@
       </div>
       <div class="js">
         <span class="label"> JS (minified) </span>
-        <div>
-          <p id="js-code">
-            let
-            tl=anime.timeline({loop:true,easing:"easeOutQuad",});tl.add({targets:".circle",height:35,duration:20,}).add({targets:".circle",translateY:-290,easing:"easeOutQuad",duration:500,}).add({targets:".circle",height:70,duration:300,},"-=500").add({targets:".circle",width:[70,35,70],duration:300,},"-=500").add({targets:".circle",translateY:0,duration:500,easing:"easeInQuad",}).add({targets:".circle",width:[70,55],duration:500,},"-=500").add({targets:".circle",height:35,width:70,duration:30,});let
-            tlRect=anime.timeline({loop:true,easing:"easeOutQuad",});tlRect.add({targets:".rect",translateY:-180,rotate:180,width:90,height:90,duration:500,delay:10,}).add({targets:".rect",translateY:0,duration:500,easing:"easeInQuad",}).add({targets:".rect",width:140,height:40,duration:500,easing:"easeInQuad",},"-=500").add({targets:".rect",duration:40,});
-          </p>
-        </div>
+
+        <p id="js-code">
+          let
+          tl=anime.timeline({loop:true,easing:"easeOutQuad",});tl.add({targets:".circle",height:35,duration:20,}).add({targets:".circle",translateY:-290,easing:"easeOutQuad",duration:500,}).add({targets:".circle",height:70,duration:300,},"-=500").add({targets:".circle",width:[70,35,70],duration:300,},"-=500").add({targets:".circle",translateY:0,duration:500,easing:"easeInQuad",}).add({targets:".circle",width:[70,55],duration:500,},"-=500").add({targets:".circle",height:35,width:70,duration:30,});let
+          tlRect=anime.timeline({loop:true,easing:"easeOutQuad",});tlRect.add({targets:".rect",translateY:-180,rotate:180,width:90,height:90,duration:500,delay:10,}).add({targets:".rect",translateY:0,duration:500,easing:"easeInQuad",}).add({targets:".rect",width:140,height:40,duration:500,easing:"easeInQuad",},"-=500").add({targets:".rect",duration:40,});
+        </p>
       </div>
       <div class="css">
         <span class="label"> SCSS (minified) </span>
-        <div>
-          <p id="css-code">
-            :root{--stroke:#61cbf5;--head:#aee8ff;--fill:#61cbf5;--textFill:#000;--border:#61cbf500}
-            .item0{margin-top: 100px;height:
-            400px}.item0Wrapper{height:100%;width:100%;margin:0
-            auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0}.circle{margin-top:auto;height:35px;width:70px;background-color:var(--fill);border-radius:50%;border:4px
-            solid
-            var(--border)}.rect{height:40px;width:140px;background-color:var(--fill);border-radius:5px;border:4px
-            solid var(--border)}
-          </p>
-        </div>
+
+        <p id="css-code">
+          :root{--stroke:#61cbf5;--head:#aee8ff;--fill:#61cbf5;--textFill:#000;--border:#61cbf500}.item0{margin-top:
+          100px;height:400px}.item0Wrapper{height:100%;width:100%;margin:0auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0}.circle{margin-top:auto;height:35px;width:70px;background-color:var(--fill);border-radius:50%;border:4pxsolidvar(--border)}.rect{height:40px;width:140px;background-color:var(--fill);border-radius:5px;border:4pxsolid
+          var(--border)}
+        </p>
       </div>
     </div>
     <div class="source-box-shadow" onclick="sourceBtnEvent()"></div>
