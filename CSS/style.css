@@ -12,6 +12,7 @@
   --head: #aee8ff;
   --fill: #0000;
   --textFill: #61cbf5;
+  --border: #61cbf5;
 }
 
 .filled {
@@ -20,12 +21,10 @@
   --head: #aee8ff;
   --fill: #61cbf5;
   --textFill: #000000;
+  --border: #61cbf500;
 }
 
-html,
 body {
-  height: 100%;
-  width: 100%;
   background-color: var(--background-color);
 }
 
@@ -49,43 +48,48 @@ body {
 }
 
 .box {
-  height: 100%;
+  height: 500px;
   width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  overflow: hidden;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: visible;
 }
 
-@media screen and (max-width: 950px) {
-  svg {
-    width: 200px;
-    height: 200px;
-  }
-  .box {
-    margin-top: 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    overflow: visible;
-  }
-  .item {
-    height: 200px;
-  }
+.box .item {
+  height: 200px;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .switch {
   position: absolute;
-  top: 80vh;
+  top: 70vh;
   left: 0;
   width: 70px;
   height: 50px;
+  z-index: 5;
 }
 
 .switch button {
@@ -103,6 +107,76 @@ body {
 
 .switch button img {
   height: 100%;
+}
+
+.item7Wrapper {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0;
+  padding-bottom: 50px;
+}
+
+.circle {
+  margin-top: auto;
+  height: 35px;
+  width: 70px;
+  background-color: var(--fill);
+  border-radius: 50%;
+  border: 4px solid var(--border);
+}
+
+.rect {
+  height: 40px;
+  width: 140px;
+  background-color: var(--fill);
+  border-radius: 5px;
+  border: 4px solid var(--border);
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+div.swiper-button-prev,
+div.swiper-button-next {
+  color: var(--stroke);
+}
+
+span.swiper-pagination-bullet {
+  background-color: var(--stroke);
+}
+
+@media screen and (min-width: 950px) {
+  .box {
+    display: block;
+    overflow: hidden;
+    height: 70vh;
+  }
+  .box .item {
+    height: 100%;
+  }
+  svg {
+    width: 220px;
+    height: 220px;
+  }
+  .switch {
+    top: 90vh;
+  }
 }
 
 .item1 {
@@ -186,6 +260,7 @@ body {
 }
 
 .item5 svg {
+  position: relative;
   fill: var(--fill);
 }
 

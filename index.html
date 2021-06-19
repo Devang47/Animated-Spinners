@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multiple spinners</title>
     <link rel="stylesheet" href="./CSS/style.css" />
-    <link rel="stylesheet" href="./hint.css">
+    <link rel="stylesheet" href="./hint.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
       integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
@@ -14,8 +19,10 @@
       referrerpolicy="no-referrer"
       defer
     ></script>
-    <script src="./JS/./AnimationScript.js" defer></script>
+    <script src="./swiper.js"></script>
+
     <script src="./JS/main.js" defer></script>
+    <script src="./JS/AnimationScript.js" defer></script>
   </head>
 
   <body>
@@ -23,260 +30,292 @@
       <h1><span> Spinners by</span> <span class="name"> Devang</span></h1>
     </div>
     <div class="box">
-      <div class="item item1">
-        <svg
-          id="firstSVG"
-          width="306"
-          height="306"
-          viewBox="0 0 306 306"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            class="first-circles"
-            cx="153"
-            cy="73"
-            r="20"
-            stroke="black"
-            stroke-width="7"
-          />
-          <circle
-            class="first-circles"
-            cx="208.833"
-            cy="95.5"
-            r="20"
-            stroke="black"
-            stroke-width="7"
-          />
-          <circle
-            class="first-circles"
-            cx="233"
-            cy="153"
-            r="20"
-            stroke="black"
-            stroke-width="7"
-          />
-          <circle
-            class="first-circles"
-            cx="208.833"
-            cy="208.833"
-            r="20"
-            stroke="black"
-            stroke-width="7"
-          />
-          <circle
-            class="first-circles"
-            cx="153"
-            cy="233"
-            r="20"
-            stroke="black"
-            stroke-width="7"
-          />
-          <circle
-            class="first-circles"
-            cx="96.3333"
-            cy="208.833"
-            r="20"
-            stroke="black"
-            stroke-width="7"
-          />
-          <circle
-            class="first-circles"
-            cx="73"
-            cy="153"
-            r="20"
-            stroke="black"
-            stroke-width="7"
-          />
-          <circle
-            class="first-circles"
-            cx="95.5"
-            cy="97.1667"
-            r="20"
-            stroke="black"
-            stroke-width="7"
-          />
-        </svg>
-      </div>
-      <div class="item item2">
-        <svg
-          width="306"
-          id="secondSVG"
-          height="306"
-          viewBox="0 0 306 306"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            class="second-circles"
-            cx="112"
-            cy="153"
-            r="35"
-            stroke="black"
-            stroke-width="8"
-          />
-          <circle
-            class="second-circles"
-            cx="209"
-            cy="153"
-            r="35"
-            stroke="black"
-            stroke-width="8"
-          />
-        </svg>
-      </div>
-      <div class="item item3">
-        <svg
-          id="thirdSVG"
-          width="306"
-          height="306"
-          viewBox="0 0 306 306"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            class="third-circles"
-            cx="59"
-            cy="153"
-            r="31"
-            stroke="black"
-            stroke-width="10"
-          />
-          <circle
-            class="third-circles"
-            cx="153"
-            cy="153"
-            r="31"
-            stroke="black"
-            stroke-width="10"
-          />
-          <circle
-            class="third-circles"
-            cx="247"
-            cy="153"
-            r="31"
-            stroke="black"
-            stroke-width="10"
-          />
-        </svg>
-      </div>
-      <div class="item item4">
-        <svg
-          width="306"
-          id="fourthSVG"
-          height="306"
-          viewBox="0 0 306 306"
-          fill="#01131a"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            class="fourth-circles"
-            cx="112"
-            cy="153"
-            r="35"
-            stroke="black"
-            stroke-width="8"
-          />
-          <circle
-            class="fourth-circles"
-            cx="209"
-            cy="153"
-            r="35"
-            stroke="black"
-            stroke-width="8"
-          />
-        </svg>
-      </div>
-      <div class="item item5">
-        <svg
-          id="fifthSVG"
-          width="306"
-          height="306"
-          viewBox="0 0 306 306"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            class="fifth-circles"
-            cx="153"
-            cy="153"
-            r="55"
-            stroke="black"
-            stroke-width="2"
-          />
-          <circle
-            class="fifth-circles"
-            cx="153"
-            cy="153"
-            r="55"
-            stroke="black"
-            stroke-width="2"
-          />
-          <circle
-            class="fifth-circles"
-            cx="153"
-            cy="153"
-            r="55"
-            stroke="black"
-            stroke-width="2"
-          />
-          <circle
-            class="fifth-circles"
-            cx="153"
-            cy="153"
-            r="55"
-            stroke="black"
-            stroke-width="2"
-          />
-          <path
-            d="M119.905 140.5H131.035C133.695 140.5 136.04 141.013 138.07 142.04C140.123 143.043 141.71 144.467 142.83 146.31C143.973 148.153 144.545 150.3 144.545 152.75C144.545 155.2 143.973 157.347 142.83 159.19C141.71 161.033 140.123 162.468 138.07 163.495C136.04 164.498 133.695 165 131.035 165H119.905V140.5ZM130.755 160.345C133.205 160.345 135.153 159.668 136.6 158.315C138.07 156.938 138.805 155.083 138.805 152.75C138.805 150.417 138.07 148.573 136.6 147.22C135.153 145.843 133.205 145.155 130.755 145.155H125.575V160.345H130.755ZM157.921 160.905C158.901 160.905 159.764 160.765 160.511 160.485C161.281 160.182 161.993 159.715 162.646 159.085L165.551 162.235C163.778 164.265 161.188 165.28 157.781 165.28C155.658 165.28 153.779 164.872 152.146 164.055C150.513 163.215 149.253 162.06 148.366 160.59C147.479 159.12 147.036 157.452 147.036 155.585C147.036 153.742 147.468 152.085 148.331 150.615C149.218 149.122 150.419 147.967 151.936 147.15C153.476 146.31 155.203 145.89 157.116 145.89C158.913 145.89 160.546 146.275 162.016 147.045C163.486 147.792 164.653 148.888 165.516 150.335C166.403 151.758 166.846 153.45 166.846 155.41L152.916 158.105C153.313 159.038 153.931 159.738 154.771 160.205C155.634 160.672 156.684 160.905 157.921 160.905ZM157.116 150.02C155.739 150.02 154.619 150.463 153.756 151.35C152.893 152.237 152.438 153.462 152.391 155.025L161.561 153.24C161.304 152.26 160.779 151.478 159.986 150.895C159.193 150.312 158.236 150.02 157.116 150.02ZM188.864 146.17L180.919 165H175.284L167.374 146.17H173.009L178.224 158.98L183.614 146.17H188.864Z"
-            fill="black"
-          />
-        </svg>
-      </div>
-      <div class="item item6">
-        <svg
-          id="sixthSVG"
-          width="306"
-          height="306"
-          viewBox="0 0 306 306"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            class="sixth-rect1"
-            d="M190.032 87.9865L218.032 87.9865V162.987H190.032V87.9865Z"
-            fill="#E1EFFF"
-            stroke="black"
-            stroke-width="6"
-          />
-          <path
-            class="sixth-rect2"
-            d="M218.698 189.191V217.191H143.698V189.191H218.698Z"
-            fill="#E1EFFF"
-            stroke="black"
-            stroke-width="6"
-          />
-          <path
-            class="sixth-rect3"
-            d="M88.0325 142.987L116.032 142.987L116.032 217.987H88.0325L88.0325 142.987Z"
-            fill="#E1EFFF"
-            stroke="black"
-            stroke-width="6"
-          />
-          <path
-            class="sixth-rect4"
-            d="M163.032 87.9865V115.987L88.0325 115.987L88.0325 87.9865L163.032 87.9865Z"
-            fill="#E1EFFF"
-            stroke="black"
-            stroke-width="6"
-          />
-        </svg>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <div class="item item7">
+              <div class="item7Wrapper">
+                <div class="circle"></div>
+                <div class="rect"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item item1">
+              <svg
+                id="firstSVG"
+                width="306"
+                height="306"
+                viewBox="0 0 306 306"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  class="first-circles"
+                  cx="153"
+                  cy="73"
+                  r="20"
+                  stroke="black"
+                  stroke-width="7"
+                />
+                <circle
+                  class="first-circles"
+                  cx="208.833"
+                  cy="95.5"
+                  r="20"
+                  stroke="black"
+                  stroke-width="7"
+                />
+                <circle
+                  class="first-circles"
+                  cx="233"
+                  cy="153"
+                  r="20"
+                  stroke="black"
+                  stroke-width="7"
+                />
+                <circle
+                  class="first-circles"
+                  cx="208.833"
+                  cy="208.833"
+                  r="20"
+                  stroke="black"
+                  stroke-width="7"
+                />
+                <circle
+                  class="first-circles"
+                  cx="153"
+                  cy="233"
+                  r="20"
+                  stroke="black"
+                  stroke-width="7"
+                />
+                <circle
+                  class="first-circles"
+                  cx="96.3333"
+                  cy="208.833"
+                  r="20"
+                  stroke="black"
+                  stroke-width="7"
+                />
+                <circle
+                  class="first-circles"
+                  cx="73"
+                  cy="153"
+                  r="20"
+                  stroke="black"
+                  stroke-width="7"
+                />
+                <circle
+                  class="first-circles"
+                  cx="95.5"
+                  cy="97.1667"
+                  r="20"
+                  stroke="black"
+                  stroke-width="7"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item item2">
+              <svg
+                width="306"
+                id="secondSVG"
+                height="306"
+                viewBox="0 0 306 306"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  class="second-circles"
+                  cx="112"
+                  cy="153"
+                  r="35"
+                  stroke="black"
+                  stroke-width="8"
+                />
+                <circle
+                  class="second-circles"
+                  cx="209"
+                  cy="153"
+                  r="35"
+                  stroke="black"
+                  stroke-width="8"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item item3">
+              <svg
+                id="thirdSVG"
+                width="306"
+                height="306"
+                viewBox="0 0 306 306"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  class="third-circles"
+                  cx="59"
+                  cy="153"
+                  r="31"
+                  stroke="black"
+                  stroke-width="10"
+                />
+                <circle
+                  class="third-circles"
+                  cx="153"
+                  cy="153"
+                  r="31"
+                  stroke="black"
+                  stroke-width="10"
+                />
+                <circle
+                  class="third-circles"
+                  cx="247"
+                  cy="153"
+                  r="31"
+                  stroke="black"
+                  stroke-width="10"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item item4">
+              <svg
+                width="306"
+                id="fourthSVG"
+                height="306"
+                viewBox="0 0 306 306"
+                fill="#01131a"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  class="fourth-circles"
+                  cx="112"
+                  cy="153"
+                  r="35"
+                  stroke="black"
+                  stroke-width="8"
+                />
+                <circle
+                  class="fourth-circles"
+                  cx="209"
+                  cy="153"
+                  r="35"
+                  stroke="black"
+                  stroke-width="8"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item item5">
+              <svg
+                id="fifthSVG"
+                width="306"
+                height="306"
+                viewBox="0 0 306 306"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  class="fifth-circles"
+                  cx="153"
+                  cy="153"
+                  r="55"
+                  stroke="black"
+                  stroke-width="2"
+                />
+                <circle
+                  class="fifth-circles"
+                  cx="153"
+                  cy="153"
+                  r="55"
+                  stroke="black"
+                  stroke-width="2"
+                />
+                <circle
+                  class="fifth-circles"
+                  cx="153"
+                  cy="153"
+                  r="55"
+                  stroke="black"
+                  stroke-width="2"
+                />
+                <circle
+                  class="fifth-circles"
+                  cx="153"
+                  cy="153"
+                  r="55"
+                  stroke="black"
+                  stroke-width="2"
+                />
+                <path
+                  d="M119.905 140.5H131.035C133.695 140.5 136.04 141.013 138.07 142.04C140.123 143.043 141.71 144.467 142.83 146.31C143.973 148.153 144.545 150.3 144.545 152.75C144.545 155.2 143.973 157.347 142.83 159.19C141.71 161.033 140.123 162.468 138.07 163.495C136.04 164.498 133.695 165 131.035 165H119.905V140.5ZM130.755 160.345C133.205 160.345 135.153 159.668 136.6 158.315C138.07 156.938 138.805 155.083 138.805 152.75C138.805 150.417 138.07 148.573 136.6 147.22C135.153 145.843 133.205 145.155 130.755 145.155H125.575V160.345H130.755ZM157.921 160.905C158.901 160.905 159.764 160.765 160.511 160.485C161.281 160.182 161.993 159.715 162.646 159.085L165.551 162.235C163.778 164.265 161.188 165.28 157.781 165.28C155.658 165.28 153.779 164.872 152.146 164.055C150.513 163.215 149.253 162.06 148.366 160.59C147.479 159.12 147.036 157.452 147.036 155.585C147.036 153.742 147.468 152.085 148.331 150.615C149.218 149.122 150.419 147.967 151.936 147.15C153.476 146.31 155.203 145.89 157.116 145.89C158.913 145.89 160.546 146.275 162.016 147.045C163.486 147.792 164.653 148.888 165.516 150.335C166.403 151.758 166.846 153.45 166.846 155.41L152.916 158.105C153.313 159.038 153.931 159.738 154.771 160.205C155.634 160.672 156.684 160.905 157.921 160.905ZM157.116 150.02C155.739 150.02 154.619 150.463 153.756 151.35C152.893 152.237 152.438 153.462 152.391 155.025L161.561 153.24C161.304 152.26 160.779 151.478 159.986 150.895C159.193 150.312 158.236 150.02 157.116 150.02ZM188.864 146.17L180.919 165H175.284L167.374 146.17H173.009L178.224 158.98L183.614 146.17H188.864Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item item6">
+              <svg
+                id="sixthSVG"
+                width="306"
+                height="306"
+                viewBox="0 0 306 306"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="sixth-rect1"
+                  d="M190.032 87.9865L218.032 87.9865V162.987H190.032V87.9865Z"
+                  fill="#E1EFFF"
+                  stroke="black"
+                  stroke-width="6"
+                />
+                <path
+                  class="sixth-rect2"
+                  d="M218.698 189.191V217.191H143.698V189.191H218.698Z"
+                  fill="#E1EFFF"
+                  stroke="black"
+                  stroke-width="6"
+                />
+                <path
+                  class="sixth-rect3"
+                  d="M88.0325 142.987L116.032 142.987L116.032 217.987H88.0325L88.0325 142.987Z"
+                  fill="#E1EFFF"
+                  stroke="black"
+                  stroke-width="6"
+                />
+                <path
+                  class="sixth-rect4"
+                  d="M163.032 87.9865V115.987L88.0325 115.987L88.0325 87.9865L163.032 87.9865Z"
+                  fill="#E1EFFF"
+                  stroke="black"
+                  stroke-width="6"
+                />
+              </svg>
+            </div>
+          </div>
+          
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
     <div class="switch">
-      <button class="hint--right hint--rounded " aria-label="Change theme" onclick="toggleTheme()">
-        <img src="./Images/swap.png" alt="">
+      <button
+        class="hint--right hint--rounded"
+        aria-label="Change theme"
+        onclick="toggleTheme()"
+      >
+        <img src="./Images/swap.png" alt="" />
       </button>
     </div>
   </body>
