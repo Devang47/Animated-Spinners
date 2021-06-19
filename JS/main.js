@@ -30,9 +30,11 @@ const swiper = new Swiper(".swiper-container", {
   },
 });
 swiper.on("slideChange", function () {
-//   console.log(swiper.activeIndex);
+  //   console.log(swiper.activeIndex);
 });
 window.addEventListener("load", () => {
+  animateZero();
+
   animateFirst();
 
   animateSecond();
@@ -45,5 +47,5 @@ window.addEventListener("load", () => {
 
   animateSixth();
 
-  animateSeventh()
+  animateSeventh();
 });

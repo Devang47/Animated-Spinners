@@ -1,3 +1,96 @@
+const animateZero = () => {
+  let tl = anime.timeline({
+    loop: true,
+    easing: "easeOutQuad",
+  });
+
+  tl.add({
+    targets: ".circle",
+    height: 35,
+    duration: 20,
+  })
+    .add({
+      targets: ".circle",
+      translateY: -290,
+      easing: "easeOutQuad",
+      duration: 500,
+    })
+    .add(
+      {
+        targets: ".circle",
+        height: 70,
+        duration: 300,
+      },
+      "-=500"
+    )
+    .add(
+      {
+        targets: ".circle",
+        width: [70, 35, 70],
+        duration: 300,
+      },
+      "-=500"
+    )
+    .add({
+      targets: ".circle",
+      translateY: 0,
+      duration: 500,
+      easing: "easeInQuad",
+    })
+    .add(
+      {
+        targets: ".circle",
+        width: [70, 55],
+        duration: 500,
+      },
+      "-=500"
+    )
+    .add({
+      targets: ".circle",
+      height: 35,
+      width: 70,
+      duration: 30,
+    });
+
+  //1150ms
+
+  let tlRect = anime.timeline({
+    loop: true,
+    easing: "easeOutQuad",
+  });
+
+  tlRect
+    .add({
+      targets: ".rect",
+      translateY: -180,
+      rotate: 180,
+      width: 90,
+      height: 90,
+      duration: 500,
+      delay: 10,
+    })
+    .add({
+      targets: ".rect",
+      translateY: 0,
+      duration: 500,
+      easing: "easeInQuad",
+    })
+    .add(
+      {
+        targets: ".rect",
+        width: 140,
+        height: 40,
+        duration: 500,
+        easing: "easeInQuad",
+      },
+      "-=500"
+    )
+    .add({
+      targets: ".rect",
+      duration: 40,
+    });
+};
+
 //first
 const animateFirst = () => {
   const firstTL = anime.timeline({
@@ -280,95 +373,17 @@ const animateSixth = () => {
     );
 };
 
-const animateSeventh = () =>{
-  let tl = anime.timeline({
+const animateSeventh = () => {
+  anime({
+    targets: ".svgPath7",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: "easeInOutSine",
+    duration: 1200,
+    delay: function (el, i) {
+      return i * 350;
+    },
+    direction: "alternate",
     loop: true,
-    easing: "easeOutQuad",
+    endDelay: 1000,
   });
-
-  tl.add({
-    targets: ".circle",
-    height: 35,
-    duration: 20,
-  })
-    .add({
-      targets: ".circle",
-      translateY: -290,
-      easing: "easeOutQuad",
-      duration: 500,
-    })
-    .add(
-      {
-        targets: ".circle",
-        height: 70,
-        duration: 300,
-      },
-      "-=500"
-    )
-    .add(
-      {
-        targets: ".circle",
-        width: [70, 35, 70],
-        duration: 300,
-      },
-      "-=500"
-    )
-    .add({
-      targets: ".circle",
-      translateY: 0,
-      duration: 500,
-      easing: "easeInQuad",
-    })
-    .add(
-      {
-        targets: ".circle",
-        width: [70, 55],
-        duration: 500,
-      },
-      "-=500"
-    )
-    .add({
-      targets: ".circle",
-      height: 35,
-      width: 70,
-      duration: 30,
-    });
-
-  //1150ms
-
-  let tlRect = anime.timeline({
-    loop: true,
-    easing: "easeOutQuad",
-  });
-
-  tlRect
-    .add({
-      targets: ".rect",
-      translateY: -180,
-      rotate: 180,
-      width: 90,
-      height: 90,
-      duration: 500,
-      delay: 10,
-    })
-    .add({
-      targets: ".rect",
-      translateY: 0,
-      duration: 500,
-      easing: "easeInQuad",
-    })
-    .add(
-      {
-        targets: ".rect",
-        width: 140,
-        height: 40,
-        duration: 500,
-        easing: "easeInQuad",
-      },
-      "-=500"
-    )
-    .add({
-      targets: ".rect",
-      duration: 40,
-    });
 }
