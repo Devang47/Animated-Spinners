@@ -1,8 +1,6 @@
 const addContent = () => {
   let htmlCode, cssCode, jsCode, rootCss;
 
-
-
   swiper.on("slideChange", () => {
     if (swiper.activeIndex == 1) {
       htmlCode =
@@ -40,6 +38,9 @@ const addContent = () => {
       jsCode =
         'const fifthTL=anime.timeline({duration:3000,complete:function(){fifthTL.restart();},easing:"easeOutSine",});let elements=document.querySelectorAll(".fifth-circles");for(let el of elements){fifthTL.add({begin:()=>{anime({targets:[elements[1],elements[2],elements[3]],r:[55,95],opacity:[1,0],delay:anime.stagger(1500/4),duration:1500,easing:"easeOutSine",});},});anime({targets:elements[0],r:60,delay:1250,duration:250,loop:true,easing:"linear",direction:"alternate",});}';
     } else if (swiper.activeIndex == 6) {
+        visitBtn.disabled = false
+
+      document.querySelector("#getSource-btn").innerHTML = "Source";
       htmlCode =
         "&lt;div class=&quot;item item6&quot;&gt; &lt;svg id=&quot;sixthSVG&quot; width=&quot;306&quot; height=&quot;306&quot; viewBox=&quot;0 0 306 306&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; &gt; &lt;path class=&quot;sixth-rect1&quot; d=&quot;M190.032 87.9865L218.032 87.9865V162.987H190.032V87.9865Z&quot; fill=&quot;#E1EFFF&quot; stroke=&quot;black&quot; stroke-width=&quot;6&quot; /&gt; &lt;path class=&quot;sixth-rect2&quot; d=&quot;M218.698 189.191V217.191H143.698V189.191H218.698Z&quot; fill=&quot;#E1EFFF&quot; stroke=&quot;black&quot; stroke-width=&quot;6&quot; /&gt; &lt;path class=&quot;sixth-rect3&quot; d=&quot;M88.0325 142.987L116.032 142.987L116.032 217.987H88.0325L88.0325 142.987Z&quot; fill=&quot;#E1EFFF&quot; stroke=&quot;black&quot; stroke-width=&quot;6&quot; /&gt; &lt;path class=&quot;sixth-rect4&quot; d=&quot;M163.032 87.9865V115.987L88.0325 115.987L88.0325 87.9865L163.032 87.9865Z&quot; fill=&quot;#E1EFFF&quot; stroke=&quot;black&quot; stroke-width=&quot;6&quot; /&gt; &lt;/svg&gt;&lt;/div&gt;   &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js&quot; integrity=&quot;sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;";
       cssCode =
@@ -48,7 +49,13 @@ const addContent = () => {
         'const sixthTL=anime.timeline({loop:true,easing:"easeInOutSine",duration:2000,});sixthTL.add({targets:".sixth-rect1",translateY:54,duration:500,}).add({targets:".sixth-rect2",translateX:-54,duration:500,},0).add({targets:".sixth-rect3",translateY:-54,duration:500,},0).add({targets:".sixth-rect4",translateX:54,duration:500,endDelay:200,},0);sixthTL.add({targets:"#sixthSVG",duration:500,rotate:135,endDelay:200,});sixthTL.add({targets:".sixth-rect2",translateX:0,duration:500,}).add({targets:".sixth-rect4",translateX:0,duration:500,endDelay:200,},"-=500");sixthTL.add({targets:".sixth-rect1",translateY:0,duration:500,}).add({targets:".sixth-rect4",translateX:54,duration:500,},"-=500");sixthTL.add({targets:".sixth-rect3",translateY:0,duration:500,},"-=500").add({targets:".sixth-rect2",translateX:-54,duration:500,endDelay:200,},"-=500");sixthTL.add({targets:".sixth-rect1",translateY:54,duration:500,}).add({targets:".sixth-rect3",translateY:-54,duration:500,endDelay:200,},"-=500");sixthTL.add({targets:"#sixthSVG",duration:500,rotate:270,endDelay:200,});sixthTL.add({targets:".sixth-rect1",translateY:0,duration:500,}).add({targets:".sixth-rect2",translateX:0,duration:500,},"-=500").add({targets:".sixth-rect3",translateY:0,duration:500,},"-=500").add({targets:".sixth-rect4",translateX:0,duration:500,endDelay:200,},"-=500");';
     } else if (swiper.activeIndex == 7) {
       animateSeventh();
-      htmlCode = "Closed";
+        visitBtn.innerHTML = "Thanks for Visiting";
+        // visitBtn.style.display = 'none'
+        visitBtn.disabled = true;
+
+      htmlCode = "Thanks for visiting";
+      jsCode = "¯_(ツ)_/¯";
+      cssCode = ''
     } else {
       htmlCode =
         "&lt;div class=&quot;item item0&quot;&gt;&lt;div class=&quot;item0Wrapper&quot;&gt;&lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;&lt;div class=&quot;rect&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;  &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js&quot; integrity=&quot;sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;";
@@ -59,14 +66,13 @@ const addContent = () => {
         'let tl=anime.timeline({loop:true,easing:"easeOutQuad",});tl.add({targets:".circle",height:35,duration:20,}).add({targets:".circle",translateY:-290,easing:"easeOutQuad",duration:500,}).add({targets:".circle",height:70,duration:300,},"-=500").add({targets:".circle",width:[70,35,70],duration:300,},"-=500").add({targets:".circle",translateY:0,duration:500,easing:"easeInQuad",}).add({targets:".circle",width:[70,55],duration:500,},"-=500").add({targets:".circle",height:35,width:70,duration:30,});let tlRect=anime.timeline({loop:true,easing:"easeOutQuad",});tlRect.add({targets:".rect",translateY:-180,rotate:180,width:90,height:90,duration:500,delay:10,}).add({targets:".rect",translateY:0,duration:500,easing:"easeInQuad",}).add({targets:".rect",width:140,height:40,duration:500,easing:"easeInQuad",},"-=500").add({targets:".rect",duration:40,});';
     }
 
-
     if (localStorage.getItem("theme") == "stroked") {
-        rootCss =
-          ":root{--stroke:#61cbf5;--head:#aee8ff;--fill:#0000;--textFill:#61cbf5;--border:#61cbf5}";
-      } else{
-        rootCss =
-          ":root{--stroke:#61cbf5;--head:#aee8ff;--fill:#61cbf5;--textFill:#000;--border:#61cbf500}";
-      }
+      rootCss =
+        ":root{--stroke:#61cbf5;--head:#aee8ff;--fill:#0000;--textFill:#61cbf5;--border:#61cbf5}";
+    } else {
+      rootCss =
+        ":root{--stroke:#61cbf5;--head:#aee8ff;--fill:#61cbf5;--textFill:#000;--border:#61cbf500}";
+    }
     document.querySelector(".htmlCode").innerHTML = htmlCode;
     document.querySelector("#css-code").innerHTML = rootCss + cssCode;
     document.querySelector("#js-code").innerHTML = jsCode;

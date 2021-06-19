@@ -48,10 +48,14 @@ window.addEventListener("load", () => {
   animateSixth();
 });
 
+let visitBtn = document.querySelector("#getSource-btn");
+visitBtn.addEventListener("click", () => {
+  sourceBtnEvent();
+});
 // animation of Source-Code box
 const sourceBtnEvent = () => {
   // alertify.message("Normal message");
-  addContent()
+  addContent();
   if (
     document.querySelector(".source-box-shadow").style.display == "" ||
     document.querySelector(".source-box-shadow").style.display == "none"
@@ -85,18 +89,17 @@ const sourceBtnEvent = () => {
         document.querySelector(".animatedTip").style.display = "block";
       },
     });
-      anime({
-        targets: ".animatedTip",
-        right: ["5%", "3%"],
-        opacity: [1, 0],
-        delay: 6100,
-        easing: "easeInOutSine",
-        duration: 100,
-        complete: () => {
-          document.querySelector(".animatedTip").style.display = "none";
-        },
-      });
- 
+    anime({
+      targets: ".animatedTip",
+      right: ["5%", "3%"],
+      opacity: [1, 0],
+      delay: 6100,
+      easing: "easeInOutSine",
+      duration: 100,
+      complete: () => {
+        document.querySelector(".animatedTip").style.display = "none";
+      },
+    });
   } else {
     anime({
       targets: ".source-view-box",
