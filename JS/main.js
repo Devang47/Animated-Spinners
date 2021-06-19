@@ -1,26 +1,33 @@
+// default theme (filled)
 if (localStorage.getItem("theme") == "stroked") {
   setTheme("stroked");
 } else {
   setTheme("filled");
 }
 
+// toggle theme function
 function toggleTheme() {
   if (localStorage.getItem("theme") == "stroked") {
     setTheme("filled");
   } else {
     setTheme("stroked");
   }
-  console.log(swiper.activeIndex);
+  addContent();
+  
 }
 
+// theme setter func.
 function setTheme(themeName) {
   localStorage.setItem("theme", themeName);
   document.body.className = themeName;
 }
 
+
+// swiper init
 const swiper = new Swiper(".swiper-container", {
   direction: "horizontal",
   loop: false,
+  centeredSlides: true,
   pagination: {
     el: ".swiper-pagination",
   },
@@ -29,23 +36,63 @@ const swiper = new Swiper(".swiper-container", {
     prevEl: ".swiper-button-prev",
   },
 });
-swiper.on("slideChange", function () {
-  //   console.log(swiper.activeIndex);
-});
+swiper.on("slideChange", addContent());
+
+// first animation starts onload of window 
+// it is a known bug and needs to be fixed 
 window.addEventListener("load", () => {
   animateZero();
+      animateFirst();
+      animateSecond();
+      animateThird();
+      animateFourth();
+      animateFifth();
+      animateSixth();
 
-  animateFirst();
-
-  animateSecond();
-
-  animateThird();
-
-  animateFourth();
-
-  animateFifth();
-
-  animateSixth();
-
-  animateSeventh();
 });
+
+// animation of Source-Code box
+const sourceBtnEvent = () => {
+  if (
+    document.querySelector(".source-box-shadow").style.display == "" ||
+    document.querySelector(".source-box-shadow").style.display == "none"
+  ) {
+    anime({
+      targets: ".source-view-box",
+      opacity: [0, 1],
+      duration: 200,
+      easing: "easeInOutSine",
+      top: ["40%", "50%"],
+      begin: () => {
+        document.querySelector(".source-view-box").style.display = "grid";
+        document.querySelector(".source-box-shadow").style.display = "block";
+        anime({
+          targets: ".source-box-shadow",
+          opacity: [0, 1],
+          duration: 200,
+          easing: "easeInOutSine",
+        });
+      },
+    });
+  } else {
+    anime({
+      targets: ".source-view-box",
+      opacity: [1, 0],
+      duration: 200,
+      easing: "easeInOutSine",
+      top: ["50%", "40%"],
+      begin: () => {
+        anime({
+          targets: ".source-box-shadow",
+          opacity: [1, 0],
+          duration: 200,
+          easing: "easeInOutSine",
+        });
+      },
+      complete: () => {
+        document.querySelector(".source-view-box").style.display = "none";
+        document.querySelector(".source-box-shadow").style.display = "none";
+      },
+    });
+  }
+};

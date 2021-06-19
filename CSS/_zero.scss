@@ -1,0 +1,33 @@
+
+.item0 {
+  height: 100%;
+}
+
+.item0Wrapper {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding-bottom: 50px;
+}
+
+.circle {
+  margin-top: auto;
+  height: 35px;
+  width: 70px;
+  background-color: var(--fill);
+  border-radius: 50%;
+  border: 4px solid var(--border);
+}
+
+.rect {
+  height: 40px;
+  width: 140px;
+  background-color: var(--fill);
+  border-radius: 5px;
+  border: 4px solid var(--border);
+}
