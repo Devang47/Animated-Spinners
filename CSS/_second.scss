@@ -1,0 +1,13 @@
+.item2 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  svg {
+      fill: var(--fill);
+    circle {
+      stroke: var(--stroke);
+      filter: drop-shadow(0 0 5px #1d355788);
+    }
+  }
+}

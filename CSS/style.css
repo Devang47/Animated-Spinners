@@ -6,11 +6,27 @@
           box-sizing: border-box;
 }
 
+.stroked {
+  --background-color: #01131a;
+  --stroke: #61cbf5;
+  --head: #aee8ff;
+  --fill: #0000;
+  --textFill: #61cbf5;
+}
+
+.filled {
+  --background-color: #01131a;
+  --stroke: #61cbf5;
+  --head: #aee8ff;
+  --fill: #61cbf5;
+  --textFill: #000000;
+}
+
 html,
 body {
   height: 100%;
   width: 100%;
-  background-color: #01131a;
+  background-color: var(--background-color);
 }
 
 .head {
@@ -24,7 +40,7 @@ body {
 }
 
 .head h1 span {
-  color: #61cbf5;
+  color: var(--head);
 }
 
 .head h1 .name {
@@ -39,33 +55,7 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   overflow: hidden;
-}
-
-.item {
-  width: 100%;
-  height: 100%;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-}
-
-.item svg path {
-  fill: #61cbf5;
-}
-
-.item svg circle,
-.item svg rect {
-  stroke: #61cbf5;
-  -webkit-filter: drop-shadow(0 0 5px #1d355788);
-          filter: drop-shadow(0 0 5px #1d355788);
-}
-
-#sixthSVG path {
-  fill: #0000;
-  stroke: #61cbf5;
 }
 
 @media screen and (max-width: 950px) {
@@ -74,6 +64,7 @@ body {
     height: 200px;
   }
   .box {
+    margin-top: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -87,5 +78,147 @@ body {
   .item {
     height: 200px;
   }
+}
+
+.switch {
+  position: absolute;
+  top: 80vh;
+  left: 0;
+  width: 70px;
+  height: 50px;
+}
+
+.switch button {
+  height: 100%;
+  margin-left: 30px;
+  background-color: #d3f2f3;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.switch button:hover {
+  background-color: white;
+}
+
+.switch button img {
+  height: 100%;
+}
+
+.item1 {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.item1 svg {
+  fill: var(--fill);
+}
+
+.item1 svg circle {
+  stroke: var(--stroke);
+  -webkit-filter: drop-shadow(0 0 5px #1d355788);
+          filter: drop-shadow(0 0 5px #1d355788);
+}
+
+.item2 {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.item2 svg {
+  fill: var(--fill);
+}
+
+.item2 svg circle {
+  stroke: var(--stroke);
+  -webkit-filter: drop-shadow(0 0 5px #1d355788);
+          filter: drop-shadow(0 0 5px #1d355788);
+}
+
+.item3 {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.item3 svg {
+  fill: var(--fill);
+}
+
+.item3 svg circle {
+  stroke: var(--stroke);
+  -webkit-filter: drop-shadow(0 0 5px #1d355788);
+          filter: drop-shadow(0 0 5px #1d355788);
+}
+
+.item4 {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.item4 svg {
+  fill: var(--fill);
+}
+
+.item4 svg circle {
+  stroke: var(--stroke);
+  -webkit-filter: drop-shadow(0 0 5px #1d355788);
+          filter: drop-shadow(0 0 5px #1d355788);
+}
+
+.item5 {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.item5 svg {
+  fill: var(--fill);
+}
+
+.item5 svg path {
+  fill: var(--textFill);
+  z-index: 2;
+  position: relative;
+}
+
+.item5 svg circle {
+  stroke: var(--stroke);
+  -webkit-filter: drop-shadow(0 0 5px #1d355788);
+          filter: drop-shadow(0 0 5px #1d355788);
+}
+
+.item6 {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.item6 svg {
+  fill: var(--fill);
+}
+
+.item6 svg path {
+  fill: var(--stroke);
+}
+
+#sixthSVG path {
+  fill: var(--fill);
+  stroke: var(--stroke);
 }
 /*# sourceMappingURL=style.css.map */

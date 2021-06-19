@@ -5,18 +5,33 @@
   box-sizing: border-box;
 }
 
+.stroked{
+    --background-color: #01131a;
+    --stroke: #61cbf5;
+    --head: #aee8ff;
+    --fill: #0000;
+    --textFill: #61cbf5;
+  }
+  .filled{
+    --background-color: #01131a;
+    --stroke: #61cbf5;
+    --head: #aee8ff;
+    --fill: #61cbf5;
+    --textFill: #000000;
+}
+
 html,
 body {
   height: 100%;
   width: 100%;
-  background-color: #01131a;
+  background-color: var(--background-color);
 }
 
 .head {
   margin-top: 20px;
   h1 {
     span {
-      color: #61cbf5;
+      color: var(--head)
     }
     .name {
       text-decoration: underline;
@@ -33,32 +48,10 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  flex-wrap: wrap;
   overflow: hidden;
 }
-.item {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  place-items: center;
-  svg {
-    path {
-      fill: #61cbf5;
-    }
-    circle,
-    rect {
-      stroke: #61cbf5;
-      filter: drop-shadow(0 0 5px #1d355788);
-    }
-  }
-}
 
-#sixthSVG {
-  path {
-    fill: #0000;
-    stroke: #61cbf5;
-  }
-}
+
 
 @media screen and (max-width: 950px) {
   svg {
@@ -66,9 +59,9 @@ body {
     height: 200px;
   }
   .box {
+      margin-top: 50px;
     display: flex;
     justify-content: center;
-    // grid-template-columns: repeat (1, 1fr );
     flex-wrap: wrap;
     overflow: visible;
   }
@@ -76,3 +69,32 @@ body {
     height: 200px;
   }
 }
+
+.switch{
+  position: absolute;
+  top: 80vh;
+  left: 0;
+  width: 70px;
+  height: 50px;
+  button{
+    height: 100%;
+    margin-left: 30px;
+    background-color: rgb(211, 242, 243);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    &:hover{
+      background-color: white;
+    }
+    img{
+      height: 100%
+    }
+  }
+}
+
+@import './first';
+@import './second';
+@import './third';
+@import './fourth';
+@import './fifth';
+@import './sixth';
