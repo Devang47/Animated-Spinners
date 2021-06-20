@@ -30,6 +30,8 @@
 
 body {
   background-color: var(--background-color);
+  width: 100%;
+  overflow-X: hidden;
 }
 
 .head {
@@ -111,6 +113,37 @@ svg {
 
 .switch button img {
   height: 100%;
+}
+
+.github {
+  position: absolute;
+  top: 88vh;
+  right: 0%;
+  z-index: 5;
+  height: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.github a {
+  margin-right: 30px;
+  display: block;
+  height: 50px;
+  background-color: white;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: #d3f2f3;
+}
+
+.github a:hover {
+  background-color: white;
+}
+
+.github a img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .swiper-container {
