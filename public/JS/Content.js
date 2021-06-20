@@ -1,6 +1,17 @@
 const addContent = () => {
   let htmlCode, cssCode, jsCode, rootCss;
 
+  // ignore it (bug)
+  // if (localStorage.getItem("theme") == "stroked") {
+  //   rootCss =
+  //     ":root{--stroke:#61cbf5;--head:#aee8ff;--fill:#0000;--textFill:#61cbf5;--border:#61cbf5}";
+  // } else {
+  //   rootCss =
+  //     ":root{--stroke:#61cbf5;--head:#aee8ff;--fill:#61cbf5;--textFill:#000;--border:#61cbf500}";
+  // }
+  // document.querySelector(".htmlCode").innerHTML = htmlCode;
+  // document.querySelector("#css-code").innerHTML = rootCss + cssCode;
+  // document.querySelector("#js-code").innerHTML = jsCode;
   swiper.on("slideChange", () => {
     if (swiper.activeIndex == 1) {
       htmlCode =
@@ -38,7 +49,7 @@ const addContent = () => {
       jsCode =
         'const fifthTL=anime.timeline({duration:3000,complete:function(){fifthTL.restart();},easing:"easeOutSine",});let elements=document.querySelectorAll(".fifth-circles");for(let el of elements){fifthTL.add({begin:()=>{anime({targets:[elements[1],elements[2],elements[3]],r:[55,95],opacity:[1,0],delay:anime.stagger(1500/4),duration:1500,easing:"easeOutSine",});},});anime({targets:elements[0],r:60,delay:1250,duration:250,loop:true,easing:"linear",direction:"alternate",});}';
     } else if (swiper.activeIndex == 6) {
-        visitBtn.disabled = false
+      visitBtn.disabled = false;
 
       document.querySelector("#getSource-btn").innerHTML = "Source";
       htmlCode =
@@ -49,13 +60,13 @@ const addContent = () => {
         'const sixthTL=anime.timeline({loop:true,easing:"easeInOutSine",duration:2000,});sixthTL.add({targets:".sixth-rect1",translateY:54,duration:500,}).add({targets:".sixth-rect2",translateX:-54,duration:500,},0).add({targets:".sixth-rect3",translateY:-54,duration:500,},0).add({targets:".sixth-rect4",translateX:54,duration:500,endDelay:200,},0);sixthTL.add({targets:"#sixthSVG",duration:500,rotate:135,endDelay:200,});sixthTL.add({targets:".sixth-rect2",translateX:0,duration:500,}).add({targets:".sixth-rect4",translateX:0,duration:500,endDelay:200,},"-=500");sixthTL.add({targets:".sixth-rect1",translateY:0,duration:500,}).add({targets:".sixth-rect4",translateX:54,duration:500,},"-=500");sixthTL.add({targets:".sixth-rect3",translateY:0,duration:500,},"-=500").add({targets:".sixth-rect2",translateX:-54,duration:500,endDelay:200,},"-=500");sixthTL.add({targets:".sixth-rect1",translateY:54,duration:500,}).add({targets:".sixth-rect3",translateY:-54,duration:500,endDelay:200,},"-=500");sixthTL.add({targets:"#sixthSVG",duration:500,rotate:270,endDelay:200,});sixthTL.add({targets:".sixth-rect1",translateY:0,duration:500,}).add({targets:".sixth-rect2",translateX:0,duration:500,},"-=500").add({targets:".sixth-rect3",translateY:0,duration:500,},"-=500").add({targets:".sixth-rect4",translateX:0,duration:500,endDelay:200,},"-=500");';
     } else if (swiper.activeIndex == 7) {
       animateSeventh();
-        visitBtn.innerHTML = "Thanks for Visiting";
-        // visitBtn.style.display = 'none'
-        visitBtn.disabled = true;
+      visitBtn.innerHTML = "Thanks for Visiting";
+      // visitBtn.style.display = 'none'
+      visitBtn.disabled = true;
 
       htmlCode = "Thanks for visiting";
       jsCode = "¯_(ツ)_/¯";
-      cssCode = ''
+      cssCode = "";
     } else {
       htmlCode =
         "&lt;div class=&quot;item item0&quot;&gt;&lt;div class=&quot;item0Wrapper&quot;&gt;&lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;&lt;div class=&quot;rect&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;  &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js&quot; integrity=&quot;sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;";
