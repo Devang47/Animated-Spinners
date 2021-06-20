@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;800&display=swap");
 @import url("http://fonts.cdnfonts.com/css/monaco");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -393,17 +394,25 @@ span.swiper-pagination-bullet {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  position: relative;
+}
+
+.item5::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: 'Dev';
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--textFill);
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .item5 svg {
   position: relative;
   fill: var(--fill);
-}
-
-.item5 svg path {
-  fill: var(--textFill);
-  z-index: 2;
-  position: relative;
 }
 
 .item5 svg circle {

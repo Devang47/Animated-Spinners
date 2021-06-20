@@ -1,16 +1,16 @@
+let htmlCode, cssCode, jsCode, rootCss;
 const addContent = () => {
-  let htmlCode, cssCode, jsCode, rootCss;
 
   // ignore it (bug)
-  // if (localStorage.getItem("theme") == "stroked") {
-  //   rootCss =
-  //     ":root{--stroke:#61cbf5;--head:#aee8ff;--fill:#0000;--textFill:#61cbf5;--border:#61cbf5}";
-  // } else {
-  //   rootCss =
-  //     ":root{--stroke:#61cbf5;--head:#aee8ff;--fill:#61cbf5;--textFill:#000;--border:#61cbf500}";
-  // }
+  if (localStorage.getItem("theme") == "stroked") {
+    rootCss =
+      ":root{--stroke:#61cbf5;--head:#aee8ff;--fill:#0000;--textFill:#61cbf5;--border:#61cbf5}";
+  } else {
+    rootCss =
+      ":root{--stroke:#61cbf5;--head:#aee8ff;--fill:#61cbf5;--textFill:#000;--border:#61cbf500}";
+  }
   // document.querySelector(".htmlCode").innerHTML = htmlCode;
-  // document.querySelector("#css-code").innerHTML = rootCss + cssCode;
+  document.querySelector("#css-code").innerHTML = rootCss + cssCode;
   // document.querySelector("#js-code").innerHTML = jsCode;
   swiper.on("slideChange", () => {
     if (swiper.activeIndex == 1) {
@@ -43,9 +43,9 @@ const addContent = () => {
         'let elements=document.querySelectorAll(".fourth-circles");let leftEl=elements[0];let rightEl=elements[1];anime({targets:leftEl,translateX:100,loop:true,easing:"easeInOutSine",r:[35,25,35,35],duration:1000,});anime({targets:rightEl,translateX:-100,loop:true,easing:"easeInOutSine",r:[35,55,35,35],duration:1000,});';
     } else if (swiper.activeIndex == 5) {
       htmlCode =
-        "&lt;div class=&quot;item item5&quot;&gt; &lt;svg id=&quot;fifthSVG&quot; width=&quot;306&quot; height=&quot;306&quot; viewBox=&quot;0 0 306 306&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; &gt; &lt;circle class=&quot;fifth-circles&quot; cx=&quot;153&quot; cy=&quot;153&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; /&gt; &lt;circle class=&quot;fifth-circles&quot; cx=&quot;153&quot; cy=&quot;153&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; /&gt; &lt;circle class=&quot;fifth-circles&quot; cx=&quot;153&quot; cy=&quot;153&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; /&gt; &lt;circle class=&quot;fifth-circles&quot; cx=&quot;153&quot; cy=&quot;153&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; /&gt; &lt;path d=&quot;M119.905 140.5H131.035C133.695 140.5 136.04 141.013 138.07 142.04C140.123 143.043 141.71 144.467 142.83 146.31C143.973 148.153 144.545 150.3 144.545 152.75C144.545 155.2 143.973 157.347 142.83 159.19C141.71 161.033 140.123 162.468 138.07 163.495C136.04 164.498 133.695 165 131.035 165H119.905V140.5ZM130.755 160.345C133.205 160.345 135.153 159.668 136.6 158.315C138.07 156.938 138.805 155.083 138.805 152.75C138.805 150.417 138.07 148.573 136.6 147.22C135.153 145.843 133.205 145.155 130.755 145.155H125.575V160.345H130.755ZM157.921 160.905C158.901 160.905 159.764 160.765 160.511 160.485C161.281 160.182 161.993 159.715 162.646 159.085L165.551 162.235C163.778 164.265 161.188 165.28 157.781 165.28C155.658 165.28 153.779 164.872 152.146 164.055C150.513 163.215 149.253 162.06 148.366 160.59C147.479 159.12 147.036 157.452 147.036 155.585C147.036 153.742 147.468 152.085 148.331 150.615C149.218 149.122 150.419 147.967 151.936 147.15C153.476 146.31 155.203 145.89 157.116 145.89C158.913 145.89 160.546 146.275 162.016 147.045C163.486 147.792 164.653 148.888 165.516 150.335C166.403 151.758 166.846 153.45 166.846 155.41L152.916 158.105C153.313 159.038 153.931 159.738 154.771 160.205C155.634 160.672 156.684 160.905 157.921 160.905ZM157.116 150.02C155.739 150.02 154.619 150.463 153.756 151.35C152.893 152.237 152.438 153.462 152.391 155.025L161.561 153.24C161.304 152.26 160.779 151.478 159.986 150.895C159.193 150.312 158.236 150.02 157.116 150.02ZM188.864 146.17L180.919 165H175.284L167.374 146.17H173.009L178.224 158.98L183.614 146.17H188.864Z&quot; fill=&quot;black&quot; /&gt; &lt;/svg&gt;&lt;/div&gt;   &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js&quot; integrity=&quot;sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;";
+        "&lt;div class=&quot;item item5&quot;&gt; &lt;svg id=&quot;fifthSVG&quot; width=&quot;306&quot; height=&quot;306&quot; viewBox=&quot;0 0 306 306&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; &gt; &lt;circle class=&quot;fifth-circles&quot; cx=&quot;153&quot; cy=&quot;153&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; /&gt; &lt;circle class=&quot;fifth-circles&quot; cx=&quot;153&quot; cy=&quot;153&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; /&gt; &lt;circle class=&quot;fifth-circles&quot; cx=&quot;153&quot; cy=&quot;153&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; /&gt; &lt;circle class=&quot;fifth-circles&quot; cx=&quot;153&quot; cy=&quot;153&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; /&gt; &lt;/svg&gt; &lt;/div&gt;  &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js&quot; integrity=&quot;sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;";
       cssCode =
-        ".item5{width:100%;height:100%;display:grid;place-items:center;svg{position:relative;fill:var(--fill);path{fill:var(--textFill);z-index:2;position:relative}circle{stroke:var(--stroke);filter:drop-shadow(0 0 5px #1d355788)}}}";
+        "@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&display=swap');.item5{width:100%;height:100%;display:grid;place-items:center;position:relative;&::after{position:absolute;top:50%;left:50%;transform:translate(-50% , -50%);content:'Dev';font-weight:600;font-size:20px;color:var(--textFill);font-family:'Montserrat Alternates',sans-serif}svg{position:relative;fill:var(--fill);circle{stroke:var(--stroke);filter:drop-shadow(0 0 5px #1d355788)}}}";
       jsCode =
         'const fifthTL=anime.timeline({duration:3000,complete:function(){fifthTL.restart();},easing:"easeOutSine",});let elements=document.querySelectorAll(".fifth-circles");for(let el of elements){fifthTL.add({begin:()=>{anime({targets:[elements[1],elements[2],elements[3]],r:[55,95],opacity:[1,0],delay:anime.stagger(1500/4),duration:1500,easing:"easeOutSine",});},});anime({targets:elements[0],r:60,delay:1250,duration:250,loop:true,easing:"linear",direction:"alternate",});}';
     } else if (swiper.activeIndex == 6) {
