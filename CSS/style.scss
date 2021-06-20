@@ -18,14 +18,6 @@
   --border: #61cbf5;
 }
 
-// :root{
-//   --stroke: #61cbf5;
-//   --head: #aee8ff;
-//   --fill: #61cbf5;
-//   --textFill: #000000;
-//   --border: #61cbf500;
-// }
-
 .filled {
   --background-color: #01131a;
   --source-box: #022431;
@@ -117,7 +109,6 @@ svg {
     margin-right: 30px;
     display: block;
     height: 50px;
-    // width: 50px;
     background-color: white;
     padding: 2px;
     border-radius: 50%;
@@ -163,7 +154,6 @@ span.swiper-pagination-bullet {
   .box {
     display: block;
     overflow: hidden;
-    // height: 100%;
     height: 70vh;
     .item {
       height: 100%;
@@ -180,8 +170,9 @@ span.swiper-pagination-bullet {
 
   .animatedTip {
     position: absolute;
+    top: 75%;
     right: 5%;
-    height: 90px;
+    height: 150px;
     padding: 13px 20px;
     text-align: center;
     width: 240px;

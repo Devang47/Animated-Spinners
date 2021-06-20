@@ -297,8 +297,9 @@ span.swiper-pagination-bullet {
   }
   .animatedTip {
     position: absolute;
+    top: 75%;
     right: 5%;
-    height: 90px;
+    height: 150px;
     padding: 13px 20px;
     text-align: center;
     width: 240px;
