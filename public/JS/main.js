@@ -28,15 +28,10 @@ const swiper = new Swiper(".swiper-container", {
   centeredSlides: true,
   pagination: {
     el: ".swiper-pagination",
-    // clickable: true,
   },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
   },
 });
 swiper.on("slideChange", addContent());

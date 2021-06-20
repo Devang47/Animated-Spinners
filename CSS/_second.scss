@@ -4,7 +4,7 @@
   display: grid;
   place-items: center;
   svg {
-      fill: var(--fill);
+    fill: var(--fill);
     circle {
       stroke: var(--stroke);
       filter: drop-shadow(0 0 5px #1d355788);
