@@ -18,7 +18,7 @@ I have made Some loading spinners using AnimeJS. These are some images/gifs:
 ![animations](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/j5fk1ah0x99doff3cfh6.gif)
 ![animations](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kbgtlu3zbig8iddec70u.gif)
 
-Check out these **animations live** at [this website](https://animejs-spinners.web.app/) (hosted on firebase)
+Check out these **animations live** at [this website](https://devang47.github.io/Javascript-animated-Spinners-with-AnimeJS/)
 
 ## Features (highlights):
 
