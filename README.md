@@ -1,4 +1,4 @@
-First of all check out this post for full details and related Info.
+First of all check out [this post](https://dev.to/devang/new-javascript-animejs-spinners-for-website-examples-source-code-4j8e) for full details and related Info.
 
 ## Hi Everyone 
 My name is **Devang Saklani** and I am a freelance **Front-end Web developer** from INDIA. I like creating things like websites, animations and writing blogs.
