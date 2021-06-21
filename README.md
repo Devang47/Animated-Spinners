@@ -10,7 +10,13 @@ I have been learning JS from few months and in first sight i loved it it's synta
 
 I have made Some loading spinners using AnimeJS. These are some images/gifs:
 
-IMAGES
+![animations](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5wsouijbxufa8cdad7kp.gif)
+![animations](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/de87afx0qy4gddl3gzcc.gif)
+![animations](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w1a04f1tqdjfrgrflsxf.gif)
+![animations](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/084hcoojnj0xknedabql.gif)
+![animations](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/paop6iy9h90ld394dw86.gif)
+![animations](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/j5fk1ah0x99doff3cfh6.gif)
+![animations](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kbgtlu3zbig8iddec70u.gif)
 
 Check out these **animations live** at [this website](https://animejs-spinners.web.app/) (hosted on firebase)
 
