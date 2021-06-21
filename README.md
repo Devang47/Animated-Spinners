@@ -43,6 +43,6 @@ However this seriously needs some *improvement* and *optimisations*.. That's why
 
 ## Contact me
 
-If you want to contact me this is my email address I'll surely reply you. 
+If you want to contact me this is my [email address](mailto:devangsaklani@gmail.com) I'll surely reply you. 
 I am also avail on Insta **[@devangsaklani](https://www.instagram.com/devangsaklani/)**
 
