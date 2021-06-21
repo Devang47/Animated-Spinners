@@ -10,9 +10,12 @@ I have been learning JS from few months and in first sight i loved it it's synta
 
 I have made Some loading spinners using AnimeJS. These are some images/gifs:
 
-![animations](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5wsouijbxufa8cdad7kp.gif)
 
+
+This one is a really viral animation called B&W loading animation 9 by Lilian Tedone:⏬
 ![animations](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/de87afx0qy4gddl3gzcc.gif)
+
+![animations](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5wsouijbxufa8cdad7kp.gif)
 
 ![animations](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w1a04f1tqdjfrgrflsxf.gif)
 
