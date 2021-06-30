@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 .source-btn {
   position: absolute;
   bottom: 5vh;
@@ -8,13 +9,14 @@
   button {
     background-color: #ff1053;
     background-color: var(--fill);
-    padding: 7px 20px;
-    font-size: 15px;
+    padding: 3px 15px;
+    font-size: 16px;
     color: var(--textFill);
     border-radius: 20px;
     border: 2px solid var(--border);
     font-weight: 500;
     opacity: 0.9;
+  font-family: "Poppins", sans-serif;
 
     &:hover {
       opacity: 1;
