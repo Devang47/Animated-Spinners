@@ -4,12 +4,13 @@ let triggerState = false;
 const NavbarOpen = () => {
   let preNav = document.querySelector(".Navbar-preScreen");
   let HiddenNav = document.querySelector(".fullHiddenNavbar");
-
-  if (HiddenNav.style.height == "0%" && !triggerState) {
+  console.log('here');
+  if (HiddenNav.style.height == "0vh" && !triggerState) {
     triggerState = "middle";
+
     anime({
       targets: [preNav, HiddenNav],
-      height: "100%",
+      height: "100vh",
       easing: "easeOutCubic",
       duration: 400,
       delay: anime.stagger(200),
@@ -37,12 +38,12 @@ const NavbarOpen = () => {
       opacity: 0,
       duration: 1800,
     });
-  } else if (HiddenNav.style.height == "100%" && triggerState === true) {
+  } else if (HiddenNav.style.height == "100vh" && triggerState === true) {
     triggerState = "middle";
     animateItems("close");
     anime({
       targets: [HiddenNav, preNav],
-      height: "0%",
+      height: "0vh",
       easing: "easeOutCubic",
       duration: 400,
       delay: anime.stagger(200),
@@ -104,6 +105,8 @@ function animateItems(res) {
         translateY: [-10, 0],
         duration: 200,
       });
+    document.body.style.height = "100vh";
+    document.body.style.overflow = "hidden";
   } else if (res === "close") {
     anime({
       targets: [".Nav-links", ".fullname", ".social-links", ".FullNameline"],
@@ -120,5 +123,7 @@ function animateItems(res) {
       easing: "easeOutCubic",
       duration: 30,
     });
+    document.body.style.height = "auto";
+    document.body.style.overflow = "visible";
   }
 }

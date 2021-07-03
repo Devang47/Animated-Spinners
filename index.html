@@ -8,25 +8,17 @@
     <link rel="stylesheet" href="./CSS/style.css" />
     <link rel="stylesheet" href="./CSS/hint.css" />
     <link rel="stylesheet" href="./CSS/swiper.min.css" />
-    <!-- <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"
-    /> -->
     <link rel="shortcut icon" href="./Images/android-chrome-512x5121.png" />
-    <script src="./JS/anime.min.js"></script>
-    <!-- <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.min.js"
-    ></script> -->
     <script src="./JS/swiper.js"></script>
-    <!-- <script src="./JS/alertfy.js" defer></script> -->
+    <script src="./JS/anime.min.js" defer></script>
+    <script src="./JS/Navbar.js" defer></script>
     <script src="./JS/AnimationScript.js" defer></script>
     <script src="./JS/Content.js" defer></script>
     <script src="./JS/main.js" defer></script>
-    <script src="./JS/Navbar.js"></script>
   </head>
 
   <body>
-   <nav>
+   <nav id="navbar">
       <div class="NavWrapper">
         <div class="Navbar-trigger MainNavicon">
           <button onclick="NavbarOpen()">
@@ -36,28 +28,13 @@
           </button>
         </div>
         <div class="Navbar-logo MainNavicon">
-          <a href="https://devang-saklani.web.app/">
-            <!-- tasks+ -->
-            <svg
-              width="38"
-              height="19"
-              viewBox="0 0 38 19"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6.375 9.1L0.1 1.05C7.45058e-09 0.916668 -0.025 0.766668 0.025 0.600001C0.075 0.433335 0.183333 0.350001 0.35 0.350001H5.15C5.31667 0.350001 5.49167 0.400001 5.675 0.500001C5.85833 0.600001 6 0.716667 6.1 0.850001L9.225 5.425C9.325 5.55833 9.44167 5.625 9.575 5.625C9.70833 5.625 9.825 5.55833 9.925 5.425C10.4583 4.675 10.9833 3.90833 11.5 3.125C12.0333 2.325 12.55 1.55833 13.05 0.825001C13.15 0.691668 13.2917 0.583334 13.475 0.500001C13.6583 0.400001 13.8333 0.350001 14 0.350001H18.775C18.975 0.350001 19.0917 0.433335 19.125 0.600001C19.1583 0.766668 19.125 0.916668 19.025 1.05L12.8 9.1C12.7 9.23333 12.65 9.39167 12.65 9.575C12.65 9.75834 12.7 9.91667 12.8 10.05L18.9 17.9C19 18.0333 19.0167 18.1917 18.95 18.375C18.9 18.5417 18.7917 18.625 18.625 18.625H13.875C13.7083 18.625 13.5333 18.575 13.35 18.475C13.1667 18.375 13.025 18.2583 12.925 18.125L9.925 13.75C9.825 13.6167 9.70833 13.55 9.575 13.55C9.44167 13.55 9.325 13.6167 9.225 13.75L6.225 18.125C6.125 18.2583 5.98333 18.375 5.8 18.475C5.61667 18.575 5.44167 18.625 5.275 18.625H0.525C0.358333 18.625 0.25 18.5417 0.2 18.375C0.15 18.1917 0.175 18.0333 0.275 17.9L6.375 10.05C6.475 9.91667 6.525 9.75834 6.525 9.575C6.525 9.39167 6.475 9.23333 6.375 9.1Z"
-                fill="white"
-              />
-              <path
-                d="M18.8229 9.475C18.8229 8.175 19.0729 6.95 19.5729 5.8C20.0729 4.65 20.7479 3.65 21.5979 2.8C22.4479 1.93333 23.4479 1.25 24.5979 0.750001C25.7479 0.25 26.9729 0 28.2729 0C29.5729 0 30.7979 0.25 31.9479 0.750001C33.0979 1.25 34.0979 1.93333 34.9479 2.8C35.8145 3.65 36.4978 4.65 36.9978 5.8C37.4978 6.95 37.7479 8.175 37.7479 9.475C37.7479 10.775 37.4978 12 36.9978 13.15C36.4978 14.3 35.8145 15.3083 34.9479 16.175C34.0979 17.025 33.0979 17.7 31.9479 18.2C30.7979 18.7 29.5729 18.95 28.2729 18.95C26.9729 18.95 25.7479 18.7 24.5979 18.2C23.4479 17.7 22.4479 17.025 21.5979 16.175C20.7479 15.3083 20.0729 14.3 19.5729 13.15C19.0729 12 18.8229 10.775 18.8229 9.475ZM23.7729 9.475C23.7729 10.1083 23.8895 10.7083 24.1229 11.275C24.3562 11.8417 24.6729 12.3417 25.0729 12.775C25.4895 13.2083 25.9729 13.5583 26.5229 13.825C27.0729 14.075 27.6562 14.2 28.2729 14.2C28.8895 14.2 29.4729 14.075 30.0229 13.825C30.5729 13.5583 31.0562 13.2083 31.4729 12.775C31.8895 12.3417 32.2145 11.8417 32.4478 11.275C32.6812 10.7083 32.7979 10.1083 32.7979 9.475C32.7979 8.85833 32.6812 8.26667 32.4478 7.7C32.2145 7.11667 31.8895 6.61667 31.4729 6.2C31.0562 5.76667 30.5729 5.425 30.0229 5.175C29.4729 4.90833 28.8895 4.775 28.2729 4.775C27.6562 4.775 27.0729 4.90833 26.5229 5.175C25.9729 5.425 25.4895 5.76667 25.0729 6.2C24.6729 6.61667 24.3562 7.11667 24.1229 7.7C23.8895 8.26667 23.7729 8.85833 23.7729 9.475Z"
-                fill="white"
-              />
-            </svg>
+          <a href="#">
+         Javascript Spinners
+            
           </a>
         </div>
         <div class="Navbar-right-icon MainNavicon">
-          <a href="#">
+          <a href="https://devang-saklani.web.app/#Contact">
             <svg
               width="28"
               height="28"
@@ -78,7 +55,7 @@
           </a>
         </div>
         <div class="Navbar-preScreen" style="height: 0%"></div>
-        <div class="fullHiddenNavbar" style="height: 0%">
+        <div class="fullHiddenNavbar" style="height: 0vh">
           <div class="fullNameWithLines">
             <span
               class="left-line FullNameline"
@@ -92,22 +69,26 @@
           </div>
           <div class="in-Site-Browsing-links">
             <div class="Nav-links Nav-link1">
-              <a href="https://devang-saklani.web.app/"> Home</a>
+              <a href="https://devang-saklani.web.app/" onclick="NavbarOpen()"> Home</a>
             </div>
             <div class="Nav-links Nav-link2">
-              <a href="https://devang-saklani.web.app/#Contact"> Contact me</a>
+              <a href="https://devang-saklani.web.app#Contact" onclick="NavbarOpen()"> Contact me</a>
             </div>
             <div class="Nav-links Nav-link3">
-              <a href="https://devang-saklani.web.app/#Blog"> Blogs</a>
+              <a href="https://devang-saklani.web.app#Blog" onclick="NavbarOpen()"> Blogs</a>
             </div>
             <div class="Nav-links Nav-link4">
-              <a href="https://devang-saklani.web.app/#Works"> Projects</a>
+              <a href="https://devang-saklani.web.app#Works" onclick="NavbarOpen()"> Projects</a>
             </div>
             <!-- <div class="Nav-links Nav-link5"> <a href="#" > </a></div> -->
           </div>
           <div class="social-links">
             <div class="SocialLinks SocialLink1">
-              <a href="https://www.linkedin.com/in/devangsaklani/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/devangsaklani/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   width="23"
                   height="23"
@@ -123,7 +104,11 @@
               </a>
             </div>
             <div class="SocialLinks SocialLink2">
-              <a href="mailto:devangsaklani@gmail.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="mailto:devangsaklani@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   width="30"
                   height="30"
@@ -139,7 +124,11 @@
               </a>
             </div>
             <div class="SocialLinks SocialLink3">
-              <a href="https://twitter.com/DevangSaklani" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://twitter.com/DevangSaklani"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   width="25"
                   height="26"
@@ -162,7 +151,11 @@
               </a>
             </div>
             <div class="SocialLinks SocialLink4">
-              <a href="https://dev.to/devang/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://dev.to/devang/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   width="32"
                   height="32"
@@ -178,7 +171,11 @@
               </a>
             </div>
             <div class="SocialLinks SocialLink5">
-              <a href="https://github.com/Devang47" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/Devang47"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   width="24"
                   height="24"
