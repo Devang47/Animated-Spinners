@@ -1,0 +1,20 @@
+.item7 {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "All original work by:";
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    color: var(--head);
+  }
+  svg {
+    // width: 50%;
+    transform: scale(2.3);
+  }
+}

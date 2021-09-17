@@ -1,6 +1,27 @@
+import Swiper from "swiper";
+import "swiper/css";
+
+// swiper init
+const swiper = new Swiper(".swiper-container", {
+  direction: "horizontal",
+  loop: false,
+  centeredSlides: true,
+  pagination: {
+    el: ".swiper-pagination",
+    // clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+});
+
 let htmlCode, cssCode, jsCode, rootCss;
 const addContent = () => {
-
   // ignore it (bug)
   if (localStorage.getItem("theme") == "stroked") {
     rootCss =
@@ -90,7 +111,6 @@ const addContent = () => {
   });
 };
 
-// converted by this tool
-// https://minifycode.com/html-minifier/
-// then
-// https://www.plus2net.com/html_tutorial/tags-page.php
+swiper.on("slideChange", addContent());
+
+export default addContent;
