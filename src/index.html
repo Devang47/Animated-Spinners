@@ -11,7 +11,7 @@
     <nav id="navbar">
       <div class="NavWrapper">
         <div class="Navbar-trigger MainNavicon">
-          <button onclick="NavbarOpen()">
+          <button class="navbar_open">
             <span class="triggerLines triggerLine1"></span
             ><span class="triggerLines triggerLine2"></span
             ><span class="triggerLines triggerLine3"></span>
@@ -56,14 +56,15 @@
           </div>
           <div class="in-Site-Browsing-links">
             <div class="Nav-links Nav-link1">
-              <a href="https://devang-saklani.web.app/" onclick="NavbarOpen()">
+              <a href="https://devang-saklani.web.app/" class="navbar_open">
                 Home</a
               >
             </div>
             <div class="Nav-links Nav-link2">
               <a
                 href="https://devang-saklani.web.app#Contact"
-                onclick="NavbarOpen()"
+              
+                class="navbar_open"
               >
                 Contact me</a
               >
@@ -71,7 +72,8 @@
             <div class="Nav-links Nav-link3">
               <a
                 href="https://devang-saklani.web.app#Blog"
-                onclick="NavbarOpen()"
+              
+                class="navbar_open"
               >
                 Blogs</a
               >
@@ -79,7 +81,9 @@
             <div class="Nav-links Nav-link4">
               <a
                 href="https://devang-saklani.web.app#Works"
-                onclick="NavbarOpen()"
+              
+                class="navbar_open"
+                class="navbar_open"
               >
                 Projects</a
               >
@@ -541,9 +545,8 @@
     </div>
     <div class="switch">
       <button
-        class="hint--right hint--rounded"
+        class="hint--right hint--rounded change_theme"
         aria-label="Change theme"
-        onclick="toggleTheme()"
       >
         <img src="./Images/swap.png" alt="" />
       </button>
@@ -599,7 +602,7 @@
         </p>
       </div>
     </div>
-    <div class="source-box-shadow" onclick="sourceBtnEvent()"></div>
+    <div class="source-box-shadow"></div>
     <script src="bundle.js"></script>
   </body>
 </html>

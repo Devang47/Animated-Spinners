@@ -1,6 +1,7 @@
 import Swiper from "swiper";
 import "swiper/css";
-
+import { visitBtn } from "./main";
+import { animateSeventh } from "./AnimationScript";
 // swiper init
 const swiper = new Swiper(".swiper-container", {
   direction: "horizontal",

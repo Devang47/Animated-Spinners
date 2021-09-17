@@ -1,11 +1,22 @@
-"use strict";
+import anime from "animejs";
 
 let triggerState = false;
+
+const triggers = document.querySelectorAll(".navbar_open");
+triggers.forEach((ele) =>
+  ele.addEventListener("click", () => {
+    NavbarOpen();
+  })
+);
+
 const NavbarOpen = () => {
   let preNav = document.querySelector(".Navbar-preScreen");
   let HiddenNav = document.querySelector(".fullHiddenNavbar");
-  console.log('here');
-  if (HiddenNav.style.height == "0vh" && !triggerState) {
+
+  if (
+    (HiddenNav.style.height == "0vh" || HiddenNav.style.height == "0px") &&
+    !triggerState
+  ) {
     triggerState = "middle";
 
     anime({

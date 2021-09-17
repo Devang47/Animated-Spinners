@@ -1,3 +1,4 @@
+import anime from "animejs";
 import addContent from "./Content";
 import {
   animateZero,
@@ -18,6 +19,9 @@ if (localStorage.getItem("theme") == "stroked") {
 }
 
 // toggle theme function
+const change_theme_btn = document.querySelector(".change_theme");
+
+change_theme_btn.addEventListener("click", () => toggleTheme());
 function toggleTheme() {
   if (localStorage.getItem("theme") == "stroked") {
     setTheme("filled");
@@ -45,11 +49,15 @@ window.addEventListener("load", () => {
   animateSixth();
 });
 
-let visitBtn = document.querySelector("#getSource-btn");
+export const visitBtn = document.querySelector("#getSource-btn");
 visitBtn.addEventListener("click", () => {
   sourceBtnEvent();
 });
+
 // animation of Source-Code box
+const sourceBtnEvent_btn = document.querySelector(".source-box-shadow");
+
+sourceBtnEvent_btn.addEventListener("click", () => sourceBtnEvent());
 const sourceBtnEvent = () => {
   // alertify.message("Normal message");
   addContent();
